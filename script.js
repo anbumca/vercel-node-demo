@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const logger = require('./config/logger');
 const Todo = require('./models/todo');
 
 const app = express();
@@ -32,9 +33,11 @@ app.post('/api/create', async (req, res) => {
 });
 
 app.get('/api/get', async (req, res) => {
+	logger.info('New user created.....................................');
+	// logger.log("Server Sent A Hello World!...............................................................");
 	//CReadUD
 	const records = await Todo.find({});
-	console.log('Response => ', records);
+	// console.log('Response => ', records);
 	res.json(records);
 });
 
