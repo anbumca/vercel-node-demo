@@ -1,0 +1,11 @@
+---
+application:
+  name: "mongo-crud-basics"
+  project: "mongo-CRUD-basics"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-mongo-crud-basics"
+  routes:
+  - application_name: "mongo-crud-basics"
+    paths:
+    - "/*"
